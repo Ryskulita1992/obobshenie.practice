@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.List;
 
-public class Box <A extends Number, B extends Number> {
+public class Box <A extends Number, B extends Number> implements Unpackable {
     A Number1;
     B Number2;
 
@@ -25,6 +25,12 @@ public class Box <A extends Number, B extends Number> {
 
     public void setNumber2(B number2) {
         Number2 = number2;
+    }
+
+    @Override
+    public void unpack(Number number) {
+        System.out.println("В коробке сумма  значений  " + getNumber1().doubleValue()+getNumber2().intValue());
+
     }
 }
 
